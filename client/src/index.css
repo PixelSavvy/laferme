@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  :root {
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Sidebar Theme */
+    --sidebar-background: 180 11% 98%; /* #fafbfb */
+    --sidebar-foreground: 240 5.3% 26.1%; /* #030712 */
+
+    --sidebar-accent: 214 12% 89%; /* #ebedf0 */
+    --sidebar-accent-foreground: 240 5.9% 10%; /* #030712 */
+    --sidebar-border: 220 13% 91%; /* #dfe2e6 */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* #98a1b0 */
+
+    /* Colors */
+    /* Base */
+    --clr-background: 0 0% 100%; /* #ffffff */
+    --clr-foreground: 224 71% 4%; /* #030712 */
+
+    /* Primary */
+    --clr-primary-50: 189 23% 94%; /* #ecf2f3 */
+    --clr-primary-100: 184 22% 87%; /* #d6e4e5 */
+    --clr-primary-200: 186 23% 74%; /* #aec9cc */
+    --clr-primary-300: 185 23% 62%; /* #88b0b4 */
+    --clr-primary-400: 186 22% 49%; /* #619399 */
+    --clr-primary-500: 186 22% 36%; /* #476c70 */
+    --clr-primary-600: 187 23% 29%; /* #39575b */
+    --clr-primary-700: 187 22% 22%; /* #2c4245 */
+    --clr-primary-800: 187 22% 14%; /* #1c2a2c */
+    --clr-primary-900: 187 22% 7%; /* #0e1516 */
+    --clr-primary-950: 180 20% 4%; /* #080c0c */
+
+    /* Neutral */
+    --clr-neutral-50: 180 11% 98%; /* #fafbfb */
+    --clr-neutral-100: 210 11% 96%; /* #f5f6f7 */
+    --clr-neutral-200: 216 14% 93%; /* #ebedf0 */
+    --clr-neutral-300: 214 12% 89%; /* #dfe2e6 */
+    --clr-neutral-400: 219 13% 79%; /* #c2c7d0 */
+    --clr-neutral-500: 218 13% 64%; /* #98a1b0 */
+    --clr-neutral-600: 218 13% 49%; /* #6b788e */
+    --clr-neutral-700: 218 20% 39%; /* #505f79 */
+    --clr-neutral-800: 218 25% 34%; /* #42526d */
+    --clr-neutral-900: 217 31% 30%; /* #354764 */
+
+    /* Success */
+    --clr-success-50: 120 38% 95%; /* #edf7ed */
+    --clr-success-100: 120 39% 91%; /* #dff1df */
+    --clr-success-200: 120 39% 82%; /* #bfe3bf */
+    --clr-success-300: 120 39% 72%; /* #9cd49c */
+    --clr-success-400: 120 39% 63%; /* #7cc67c */
+    --clr-success-500: 120 39% 54%; /* #5cb85c */
+    --clr-success-600: 120 30% 43%; /* #439943 */
+    --clr-success-700: 120 39% 32%; /* #327232 */
+    --clr-success-800: 120 39% 22%; /* #224e22 */
+    --clr-success-900: 120 39% 11%; /* #112711 */
+    --clr-success-950: 120 38% 5%; /* #081208 */
+
+    /* Danger */
+    --clr-danger-50: 5 62% 96%; /* #fbefee */
+    --clr-danger-100: 2 66% 92%; /* #f8dedd */
+    --clr-danger-200: 1 65% 83%; /* #f0b9b8 */
+    --clr-danger-300: 2 64% 75%; /* #e89996 */
+    --clr-danger-400: 2 64% 66%; /* #e07470 */
+    --clr-danger-500: 2 64% 58%; /* #d9534f */
+    --clr-danger-600: 2 55% 46%; /* #c12e2a */
+    --clr-danger-700: 2 35% 35%; /* #932320 */
+    --clr-danger-800: 2 64% 23%; /* #601715 */
+    --clr-danger-900: 2 64% 12%; /* #320c0b */
+    --clr-danger-950: 3 67% 6%; /* #190605 */
+
+    /* Warning */
+    --clr-warning-50: 35 81% 96%; /* #fdf6ec */
+    --clr-warning-100: 36 85% 92%; /* #fceed9 */
+    --clr-warning-200: 35 84% 85%; /* #f9deb8 */
+    --clr-warning-300: 35 85% 77%; /* #f6cd93 */
+    --clr-warning-400: 35 84% 70%; /* #f3be72 */
+    --clr-warning-500: 35 84% 62%; /* #f0ad4e */
+    --clr-warning-600: 35 84% 50%; /* #eb9214 */
+    --clr-warning-700: 35 50% 37%; /* #ae6c0f */
+    --clr-warning-800: 35 84% 25%; /* #76490a */
+    --clr-warning-900: 35 84% 12%; /* #382305 */
+    --clr-warning-950: 37 87% 6%; /* #1c1202 */
+
+    /* Info */
+    --clr-info-50: 212 71% 96%; /* #edf4fc */
+    --clr-info-100: 213 71% 92%; /* #dce9f9 */
+    --clr-info-200: 213 73% 84%; /* #b9d4f4 */
+    --clr-info-300: 212 72% 75%; /* #91bced */
+    --clr-info-400: 212 73% 67%; /* #6ea6e8 */
+    --clr-info-500: 212 72% 59%; /* #4a90e2 */
+    --clr-info-600: 212 64% 47%; /* #2171cf */
+    --clr-info-700: 213 39% 35%; /* #19549a */
+    --clr-info-800: 212 72% 24%; /* #113a69 */
+    --clr-info-900: 212 74% 12%; /* #081d35 */
+    --clr-info-950: 213 73% 6%; /* #040e1a */
+
+    --clr-ring: 186 22% 36%; /* #476c70 */
+    --clr-input: 218 13% 64%; /* #98a1b0 */
+
+    /* Border Radius */
+    --radius: 0.5rem;
+
+    /* Typography */
+    /* Font Family */
+    --ff-georgian-sans: 'Noto Sans Georgian', sans-serif;
+
+    /* Fonst size */
+    --fz-desktop-dislpay-lg: 3.25rem;
+    --fz-desktop-display-sm: 2.75rem;
+
+    --fz-desktop-h1: 2.5rem;
+    --fz-desktop-h2: 2.25rem;
+    --fz-desktop-h3: 2rem;
+    --fz-desktop-h4: 1.75rem;
+    --fz-desktop-h5: 1.5rem;
+    --fz-desktop-h6: 1.25rem;
+
+    --fz-mobile-h1: 2.25rem;
+    --fz-mobile-h2: 2rem;
+    --fz-mobile-h3: 1.75rem;
+    --fz-mobile-h4: 1.5rem;
+    --fz-mobile-h5: 1.25rem;
+    --fz-mobile-h6: 1.125rem;
+
+    --fz-paraghrap-lg: 1.25rem;
+    --fz-paraghrap-md: 1rem;
+    --fz-paraghrap-sm: 0.85rem;
+
+    --fz-label-lg: 1rem;
+    --fz-label-md: 0.85rem;
+    --fz-label-sm: 0.75rem;
+    --fz-label-xs: 0.625rem;
+
+    /* Line height */
+    --lh-desktop-display-lg: 3.5rem;
+    --lh-desktop-display-sm: 3rem;
+    --lh-desktop-h1: 3rem;
+    --lg-desktop-h2: 2.75rem;
+    --lg-desktop-h3: 2.5rem;
+    --lg-desktop-h4: 2.25rem;
+    --lg-desktop-h5: 2rem;
+    --lg-desktop-h6: 1.75rem;
+
+    --lh-mobile-h1: 2.75rem;
+    --lh-mobile-h2: 2.5rem;
+    --lh-mobile-h3: 2.25rem;
+    --lh-mobile-h4: 2rem;
+    --lh-mobile-h5: 1.75rem;
+    --lh-mobile-h6: 1.5rem;
+
+    --lh-paraghrap-lg: 1.75rem;
+    --lh-paraghrap-md: 1.5rem;
+    --lh-paraghrap-sm: 1.25rem;
+
+    --lh-label-lg: 1.25rem;
+    --lh-label-md: 1rem;
+    --lh-label-sm: 1rem;
+    --lh-label-xs: 0.875rem;
+
+    /* Letter Spacing */
+    --ls-tight: -2%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground typo-paragraph-md font-georgian-sans;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
